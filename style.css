@@ -297,11 +297,11 @@ h1, h2, h3 {
   display: inline-flex;
   align-items: center;
   gap: 0.5em;
-  padding: 0.64em 1.4em;
+  padding: 0.85em 1.8em;
   font-family: var(--font-en);
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   font-weight: 400;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   border: 1px solid currentColor;
   transition: background var(--transition), color var(--transition), border-color var(--transition);
@@ -696,21 +696,21 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1.1rem 1.4rem;
+  padding: 1.3rem 1.5rem;
   border: 1px solid var(--border);
   font-family: var(--font-en);
   font-weight: 300;
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   letter-spacing: 0.04em;
   transition: background var(--transition), border-color var(--transition);
 }
 
 .link-row:hover { background: var(--off); border-color: var(--plum); }
 
-.link-row .link-icon { width: 18px; height: 18px; opacity: 0.5; flex-shrink: 0; }
+.link-row .link-icon { width: 22px; height: 22px; opacity: 0.5; flex-shrink: 0; }
 .link-row .link-label { flex: 1; }
-.link-row .link-label .jp { font-family: var(--font-jp); font-size: 0.78rem; color: var(--mid); }
-.link-row .link-arrow { font-size: 0.7rem; color: var(--mid); }
+.link-row .link-label .jp { font-family: var(--font-jp); font-size: 0.82rem; color: var(--mid); margin-top: 0.15em; }
+.link-row .link-arrow { font-size: 0.85rem; color: var(--mid); }
 
 /* === Fade-in === */
 .fade-in {
