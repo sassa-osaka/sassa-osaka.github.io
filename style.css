@@ -178,5 +178,7 @@ ul{list-style:none;}
   .section{padding:4rem 1.5rem;}
   .info-row{grid-template-columns:100px 1fr;}
   .index-link{padding:2rem 1.5rem;}
+  .scroll-hint{display:none;}
+  .hero-copy{padding:3rem 1.5rem 2.6rem;}
 }
 @media(max-width:400px){html{font-size:14px;}}
