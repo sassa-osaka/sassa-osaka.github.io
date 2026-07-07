@@ -335,3 +335,41 @@ body.lamp-on.page-util .band img.lit,body.lamp-on.page-util .page-hero img.lit{f
   body.lamp-on .hero img,body.lamp-on .page-hero img,body.lamp-on .band img,
   body.lamp-on .split .ph img,body.lamp-on .triple .ph img{filter:none;transition:none;}
 }
+/* ============================================
+   予約導線の強化（案B）— style.css の末尾に追記
+   ============================================ */
+/* ナビ常時の予約リンク：琥珀のアクセント */
+.nav-reserve{color:#ffc482!important;opacity:1!important;
+  border:1px solid rgba(255,196,130,.4);padding:.4em 1.1em;border-radius:99px;
+  transition:background .35s ease,border-color .35s ease;}
+.nav-reserve:hover{background:rgba(255,196,130,.12);border-color:rgba(255,196,130,.7);}
+.nav.solid .nav-reserve{padding:.35em 1em;}
+
+/* フッター内の Reserve は枠を外し、他のリンクと揃える */
+.foot .flinks .nav-reserve{border:none;padding:0;border-radius:0;
+  color:#ffc482!important;letter-spacing:.24em;text-transform:uppercase;font-size:.7rem;}
+.foot .flinks .nav-reserve:hover{background:none;color:#fff!important;}
+/* モバイルドロワーの予約リンク */
+.drawer-reserve{color:#ffc482!important;}
+.drawer-reserve span{color:rgba(255,196,130,.6)!important;}
+
+/* Stayブロックの「ご予約」補助リンク */
+.lnk-reserve{margin-left:1.6rem;color:#ffc482;border-bottom-color:rgba(255,196,130,.4);}
+.lnk-reserve:hover{color:#ffc482;border-bottom-color:rgba(255,196,130,.7);}
+
+/* 最下部CTA：予約を主役に */
+.btn-lg{font-size:.9rem;padding:1.3em 3.2em;letter-spacing:.28em;}
+.cta-note{font-family:'Spectral',Georgia,serif;font-weight:300;font-size:.78rem;
+  letter-spacing:.06em;color:#9a8d88;margin-top:1.6rem;}
+.cta-note a{color:#e8e0da;border-bottom:1px solid rgba(232,224,218,.14);padding-bottom:.1em;
+  transition:color .35s ease,border-color .35s ease;}
+.cta-note a:hover{color:#ffc482;border-color:rgba(255,196,130,.5);}
+.cta-sub{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;
+  margin:3.4rem auto 0;padding-top:2.6rem;border-top:1px solid rgba(232,224,218,.14);max-width:30em;}
+.btn-sm{margin-top:0;font-size:.72rem;padding:.85em 1.8em;letter-spacing:.2em;}
+
+@media(max-width:720px){
+  .nav-reserve{display:inline-block!important;}
+  .lnk-reserve{margin-left:0;margin-top:1rem;display:inline-block;}
+  .btn-lg{padding:1.2em 2.4em;}
+}
