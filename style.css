@@ -24,31 +24,7 @@ a{color:inherit;text-decoration:none;}
 ul{list-style:none;}
 ::selection{background:rgba(255,196,130,.25);}
 
-/* ============ 灯 — the lamp ============ */
-#lamp{position:fixed;inset:0;z-index:90;pointer-events:none;mix-blend-mode:screen;
-  background:radial-gradient(min(46vw,460px) at var(--lx,50%) var(--ly,40%),
-    rgba(255,196,130,.15), rgba(255,170,110,.05) 45%, transparent 70%);
-  animation:lampBreathe 4.6s ease-in-out infinite;}
-@keyframes lampBreathe{0%,100%{opacity:.85}50%{opacity:1}}
-body.page-util #lamp{
-  background:radial-gradient(min(38vw,380px) at var(--lx,50%) var(--ly,40%),
-    rgba(255,196,130,.09), transparent 62%);}
-
-#grain{position:fixed;inset:-50%;z-index:95;pointer-events:none;opacity:.045;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
-  animation:grainShift 1.4s steps(3) infinite;}
-@keyframes grainShift{0%{transform:translate(0,0)}33%{transform:translate(-2%,1%)}
-  66%{transform:translate(1%,-2%)}100%{transform:translate(0,0)}}
-
-/* images sleep in the dark, wake near the light */
-.hero img,.page-hero img,.band img,.split .ph img,.triple .ph img{
-  filter:brightness(.66) saturate(.92);transition:filter 1.2s ease;}
-.hero img.lit,.page-hero img.lit,.band img.lit,
-.split .ph img.lit,.triple .ph img.lit{filter:brightness(1) saturate(1);}
-body.page-util .hero img,body.page-util .page-hero img,body.page-util .band img,
-body.page-util .split .ph img,body.page-util .triple .ph img{
-  filter:brightness(.82) saturate(.96);}
-body.page-util .band img.lit,body.page-util .page-hero img.lit{filter:none;}
+/* 灯は使わず、静かな夜の余韻のみ。写真は通常の明るさ。 */
 
 /* ============ Nav ============ */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;
@@ -84,9 +60,11 @@ body.page-util .band img.lit,body.page-util .page-hero img.lit{filter:none;}
   display:flex;align-items:center;justify-content:center;}
 .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 .hero::after{content:"";position:absolute;inset:0;
-  background:radial-gradient(90% 80% at 50% 45%, transparent 30%, rgba(20,12,15,.55) 100%),
-  linear-gradient(to bottom, rgba(20,12,15,.3), transparent 30%, transparent 60%, rgba(20,12,15,.85));}
-.hero-copy{position:relative;z-index:10;text-align:center;padding:0 1.5rem;}
+  background:radial-gradient(52% 40% at 50% 50%, rgba(20,12,15,.52), transparent 72%),
+  radial-gradient(90% 80% at 50% 45%, transparent 30%, rgba(20,12,15,.55) 100%),
+  linear-gradient(to bottom, rgba(20,12,15,.35), transparent 30%, transparent 60%, rgba(20,12,15,.85));}
+.hero-copy{position:relative;z-index:10;text-align:center;padding:0 1.5rem;
+  text-shadow:0 2px 44px rgba(0,0,0,.8),0 1px 10px rgba(0,0,0,.45);}
 .hero-title{font-family:var(--jp);font-weight:400;font-size:clamp(3.2rem,10vw,6.4rem);
   letter-spacing:.3em;text-indent:.3em;color:var(--paper);line-height:1.2;
   opacity:0;filter:blur(14px);transform:translateY(.25em);
@@ -117,9 +95,11 @@ body.page-util .band img.lit,body.page-util .page-hero img.lit{filter:none;}
   display:flex;align-items:center;justify-content:center;}
 .page-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 .page-hero::after{content:"";position:absolute;inset:0;
-  background:radial-gradient(90% 80% at 50% 45%, transparent 30%, rgba(20,12,15,.5) 100%),
-  linear-gradient(to bottom, rgba(20,12,15,.35), transparent 35%, rgba(20,12,15,.85));}
-.page-hero-copy{position:relative;z-index:10;text-align:center;padding:0 1.5rem;}
+  background:radial-gradient(54% 42% at 50% 50%, rgba(20,12,15,.55), transparent 72%),
+  radial-gradient(90% 80% at 50% 45%, transparent 30%, rgba(20,12,15,.5) 100%),
+  linear-gradient(to bottom, rgba(20,12,15,.4), transparent 35%, rgba(20,12,15,.85));}
+.page-hero-copy{position:relative;z-index:10;text-align:center;padding:0 1.5rem;
+  text-shadow:0 2px 44px rgba(0,0,0,.8),0 1px 10px rgba(0,0,0,.45);}
 .page-hero .num{font-family:var(--en);font-style:italic;font-size:.72rem;
   letter-spacing:.4em;color:var(--mid);margin-bottom:1.6rem;
   opacity:0;animation:lampFadeIn 1.4s .4s ease forwards;}
@@ -143,7 +123,7 @@ body.page-util .band img.lit,body.page-util .page-hero img.lit{filter:none;}
 /* ============ Band (full-bleed photo) ============ */
 .band{position:relative;height:62vh;min-height:340px;overflow:hidden;}
 .band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-.band::after{content:"";position:absolute;inset:0;background:rgba(20,12,15,.22);}
+.band::after{content:"";position:absolute;inset:0;background:rgba(20,12,15,.3);}
 .band-cap{position:absolute;inset:0;z-index:5;display:flex;align-items:center;
   justify-content:center;text-align:center;padding:0 1.5rem;
   font-family:var(--en);font-style:italic;font-weight:300;
@@ -307,11 +287,50 @@ body.page-util .band img.lit,body.page-util .page-hero img.lit{filter:none;}
 
 /* ============ Reduced motion ============ */
 @media(prefers-reduced-motion:reduce){
-  #lamp,#grain{display:none;}
   .hero img,.page-hero img,.band img,.split .ph img,.triple .ph img{filter:none;transition:none;}
   .hero-title,.hero-tagline,.lamp-hint,.page-hero .num,.page-hero h1{
     animation:none;opacity:1;filter:none;transform:none;}
   .scroll-hint{animation:none;}
   .fade{opacity:1;transform:none;transition:none;}
   html{scroll-behavior:auto;}
+}
+
+/* ============================================
+   灯 — the lamp (script.js の LAMP_ENABLED で切替)
+   body.lamp-on が付いた時だけ有効になる層。
+   ============================================ */
+.lamp-hint{display:none;}
+body.lamp-on .lamp-hint{display:block;}
+
+body.lamp-on #lamp{position:fixed;inset:0;z-index:90;pointer-events:none;mix-blend-mode:screen;
+  background:radial-gradient(min(46vw,460px) at var(--lx,50%) var(--ly,40%),
+    rgba(255,196,130,.15), rgba(255,170,110,.05) 45%, transparent 70%);
+  animation:lampBreathe 4.6s ease-in-out infinite;}
+@keyframes lampBreathe{0%,100%{opacity:.85}50%{opacity:1}}
+body.lamp-on.page-util #lamp{
+  background:radial-gradient(min(38vw,380px) at var(--lx,50%) var(--ly,40%),
+    rgba(255,196,130,.09), transparent 62%);}
+
+body.lamp-on #grain{position:fixed;inset:-50%;z-index:95;pointer-events:none;opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grainShift 1.4s steps(3) infinite;}
+@keyframes grainShift{0%{transform:translate(0,0)}33%{transform:translate(-2%,1%)}
+  66%{transform:translate(1%,-2%)}100%{transform:translate(0,0)}}
+
+/* 灯ON時のみ：写真は暗がりに眠り、灯りが近づくと目を覚ます */
+body.lamp-on .hero img,body.lamp-on .page-hero img,body.lamp-on .band img,
+body.lamp-on .split .ph img,body.lamp-on .triple .ph img{
+  filter:brightness(.66) saturate(.92);transition:filter 1.2s ease;}
+body.lamp-on .hero img.lit,body.lamp-on .page-hero img.lit,body.lamp-on .band img.lit,
+body.lamp-on .split .ph img.lit,body.lamp-on .triple .ph img.lit{
+  filter:brightness(1) saturate(1);}
+body.lamp-on.page-util .hero img,body.lamp-on.page-util .page-hero img,
+body.lamp-on.page-util .band img,body.lamp-on.page-util .split .ph img,
+body.lamp-on.page-util .triple .ph img{filter:brightness(.82) saturate(.96);}
+body.lamp-on.page-util .band img.lit,body.lamp-on.page-util .page-hero img.lit{filter:none;}
+
+@media(prefers-reduced-motion:reduce){
+  body.lamp-on #lamp,body.lamp-on #grain{display:none;}
+  body.lamp-on .hero img,body.lamp-on .page-hero img,body.lamp-on .band img,
+  body.lamp-on .split .ph img,body.lamp-on .triple .ph img{filter:none;transition:none;}
 }

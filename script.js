@@ -30,12 +30,21 @@
   document.querySelectorAll('.fade').forEach(function(el){io.observe(el);});
 })();
 
-/* === Concept C「灯」— lamp light === */
+/* ================================================
+   灯 — the lamp
+   ------------------------------------------------
+   灯を消したい時は、すぐ下の true を false に
+   書き換えるだけでOKです（他は触らなくて大丈夫）。
+   ================================================ */
+var LAMP_ENABLED = true;   // ← 灯のON/OFFスイッチ（true=つける / false=消す）
+
 (function(){
   'use strict';
+  if(!LAMP_ENABLED)return;
   if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
 
-  // create overlay layers
+  document.body.classList.add('lamp-on');
+
   var lamp=document.createElement('div');lamp.id='lamp';lamp.setAttribute('aria-hidden','true');
   var grain=document.createElement('div');grain.id='grain';grain.setAttribute('aria-hidden','true');
   document.body.appendChild(lamp);document.body.appendChild(grain);
@@ -58,7 +67,7 @@
   window.addEventListener('resize',function(){radius=Math.min(window.innerWidth,460)*0.5;},{passive:true});
 
   function loop(ts){
-    if(idle){ // slow candle-drift when untouched (important on mobile)
+    if(idle){ // 触れていない間は、ろうそくのようにゆっくり漂う
       tx=window.innerWidth*(0.5+0.25*Math.sin(ts/3400));
       ty=window.innerHeight*(0.42+0.13*Math.cos(ts/4600));
     }
