@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sassa-osaka.github.io/sitemap.xml

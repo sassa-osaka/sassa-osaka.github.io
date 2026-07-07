@@ -15,6 +15,41 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="favicon.ico">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BookStore",
+      "@id": "https://sassa-osaka.github.io/#bookstore",
+      "name": "刷々 sassa",
+      "alternateName": "sassa",
+      "description": "建築・アート・写真集を中心に扱うアートブックストア。不定休（営業日はInstagramにて）。",
+      "url": "https://sassa-osaka.github.io/",
+      "email": "sassa.front@gmail.com",
+      "address": {"@type":"PostalAddress","postalCode":"538-0044","addressCountry":"JP","addressRegion":"大阪府","addressLocality":"大阪市鶴見区","streetAddress":"放出東3-22-3 #F5 2F"},
+      "geo": {"@type":"GeoCoordinates","latitude":34.688976,"longitude":135.5635653},
+      "image": "https://sassa-osaka.github.io/images/og.jpg",
+      "sameAs": ["https://www.instagram.com/book_sassa/","https://sassabooks.base.shop/"]
+    },
+    {
+      "@type": "LodgingBusiness",
+      "@id": "https://sassa-osaka.github.io/#stay",
+      "name": "刷々 sassa（宿）",
+      "description": "商店街に残る木造長屋を改修した、一日一組の宿。約27㎡・クイーンベッド。",
+      "url": "https://sassa-osaka.github.io/stay.html",
+      "email": "sassa.front@gmail.com",
+      "checkinTime": "16:00",
+      "checkoutTime": "11:00",
+      "numberOfRooms": 1,
+      "address": {"@type":"PostalAddress","postalCode":"538-0044","addressCountry":"JP","addressRegion":"大阪府","addressLocality":"大阪市鶴見区","streetAddress":"放出東3-22-3 #F5 2F"},
+      "geo": {"@type":"GeoCoordinates","latitude":34.688976,"longitude":135.5635653},
+      "image": "https://sassa-osaka.github.io/images/hero-stay.jpg",
+      "sameAs": ["https://airbnb.jp/h/sassa-osaka","https://www.instagram.com/book_sassa/"]
+    }
+  ]
+}
+</script>
 </head><body>
 <nav class="nav">
   <a href="index.html" class="logo">刷々<span>sassa</span></a>
@@ -36,6 +71,7 @@
     <h1 class="hero-title">刷々<span class="en">sassa</span></h1>
     <p class="hero-tagline">本のページをめくる音。<span class="en2">An art bookstore & stay in a renovated wooden row house.</span></p>
   </div>
+  <p class="lamp-hint">指先が灯りになります — your fingertip is the lamp</p>
   <div class="scroll-hint">Scroll</div>
 </section>
 
@@ -46,12 +82,12 @@
 </section>
 
 <section class="band">
-  <img src="images/wide-street.jpg" alt="商店街">
+  <img src="images/wide-street.jpg" alt="商店街" loading="lazy">
   <p class="band-cap">放出の商店街 — the shopping street</p>
 </section>
 
 <section class="split">
-  <div class="ph"><img src="images/stay-1.jpg" alt="客室"></div>
+  <div class="ph"><img src="images/stay-1.jpg" alt="客室" loading="lazy"></div>
   <div class="txt fade">
     <div class="num">01 — Stay</div>
     <h2>泊まる</h2>
@@ -71,11 +107,11 @@
     <p class="p-en">Architecture, art, and photobooks. A curated selection from Japan and around the world, chosen one book at a time.</p>
     <a href="books.html" class="lnk">View Books →</a>
   </div>
-  <div class="ph"><img src="images/books-1.jpg" alt="本屋"></div>
+  <div class="ph"><img src="images/books-1.jpg" alt="本屋" loading="lazy"></div>
 </section>
 
 <section class="band">
-  <img src="images/books-wide.jpg" alt="本の並ぶ机">
+  <img src="images/books-wide.jpg" alt="本の並ぶ机" loading="lazy">
   <p class="band-cap">本が並ぶ机 — the reading table</p>
 </section>
 
