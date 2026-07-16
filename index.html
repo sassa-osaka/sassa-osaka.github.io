@@ -59,11 +59,19 @@
   ]
 }
 </script>
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TS4EB0FBYE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TS4EB0FBYE');
+</script>
 </head><body>
 <nav class="nav">
   <a href="index.html" class="logo">刷々<span>sassa</span></a>
   <div class="nav-links">
-    <a href="stay.html">Stay</a><a href="books.html">Books</a><a href="access.html">Access</a><a href="info.html">Info</a><a href="https://airbnb.jp/h/sassa-osaka" target="_blank" rel="noopener" class="nav-reserve">Reserve ↗</a>
+    <a href="stay.html">Stay</a><a href="books.html">Books</a><a href="access.html">Access</a><a href="info.html">Info</a><a href="https://airbnb.jp/h/sassa-osaka" target="_blank" rel="noopener" class="nav-reserve" onclick="gtag('event','reserve_click',{'link_location':'page'})">Reserve ↗</a>
   </div>
   <button class="nav-toggle" aria-label="メニュー"><span></span><span></span><span></span></button>
 </nav>
@@ -72,7 +80,7 @@
   <a href="books.html">Books<span>本屋</span></a>
   <a href="access.html">Access<span>アクセス</span></a>
   <a href="info.html">Info<span>情報</span></a>
-  <a href="https://airbnb.jp/h/sassa-osaka" target="_blank" rel="noopener" class="drawer-reserve">Reserve<span>ご予約</span></a>
+  <a href="https://airbnb.jp/h/sassa-osaka" target="_blank" rel="noopener" class="drawer-reserve" onclick="gtag('event','reserve_click',{'link_location':'page'})">Reserve<span>ご予約</span></a>
 </div>
 
 <section class="hero">
@@ -105,7 +113,7 @@
     <p>約27㎡の客室に、クイーンサイズのベッドがひとつ。土壁や木の手触りを残した、静かな滞在。</p>
     <p class="p-en">A 27 m² room with a single queen bed, finished in earthen walls and natural wood.</p>
     <a href="stay.html" class="lnk">View Stay →</a>
-    <a href="https://airbnb.jp/h/sassa-osaka" target="_blank" rel="noopener" class="lnk lnk-reserve">ご予約 ↗</a>
+    <a href="https://airbnb.jp/h/sassa-osaka" target="_blank" rel="noopener" class="lnk lnk-reserve" onclick="gtag('event','reserve_click',{'link_location':'page'})">ご予約 ↗</a>
   </div>
 </section>
 
@@ -134,10 +142,10 @@
 <section class="cta">
   <h3>ページをめくるように、旅をする。</h3>
   <p class="sub">Let your journey unfold, one page at a time.</p>
-  <a href="https://airbnb.jp/h/sassa-osaka" target="_blank" rel="noopener" class="btn fill btn-lg">Airbnbで予約する ↗</a>
+  <a href="https://airbnb.jp/h/sassa-osaka" target="_blank" rel="noopener" class="btn fill btn-lg" onclick="gtag('event','reserve_click',{'link_location':'page'})">Airbnbで予約する ↗</a>
   <p class="cta-note">ご不明な点は <a href="mailto:sassa.front@gmail.com">メール</a> でもお気軽に。</p>
   <div class="cta-sub">
-    <a href="https://sassabooks.base.shop/" target="_blank" rel="noopener" class="btn btn-sm">オンラインショップ ↗</a>
+    <a href="https://sassabooks.base.shop/" target="_blank" rel="noopener" class="btn btn-sm" onclick="gtag('event','shop_click')">オンラインショップ ↗</a>
     <a href="https://www.instagram.com/book_sassa/" target="_blank" rel="noopener" class="btn btn-sm">Instagram ↗</a>
   </div>
 </section>
@@ -146,7 +154,7 @@
   <div class="fn">刷々<span>sassa</span></div>
   <p class="addr">大阪市鶴見区放出東 3-22-3 #F5 2F / Hanaten, Tsurumi, Osaka</p>
   <div class="flinks">
-    <a href="stay.html">Stay</a><a href="books.html">Books</a><a href="access.html">Access</a><a href="info.html">Info</a><a href="https://airbnb.jp/h/sassa-osaka" target="_blank" rel="noopener" class="nav-reserve">Reserve ↗</a>
+    <a href="stay.html">Stay</a><a href="books.html">Books</a><a href="access.html">Access</a><a href="info.html">Info</a><a href="https://airbnb.jp/h/sassa-osaka" target="_blank" rel="noopener" class="nav-reserve" onclick="gtag('event','reserve_click',{'link_location':'page'})">Reserve ↗</a>
     <a href="https://www.instagram.com/book_sassa/" target="_blank" rel="noopener">Instagram ↗</a>
   </div>
   <p class="copy">© 2026 刷々 sassa. All rights reserved.</p>
